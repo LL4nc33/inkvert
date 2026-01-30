@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.2-black?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.0.3-black?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/wasm-powered-black?style=flat-square" alt="WASM" />
   <img src="https://img.shields.io/badge/client--side-only-black?style=flat-square" alt="Client-side" />
   <img src="https://img.shields.io/badge/license-AGPL--3.0-black?style=flat-square" alt="License" />
@@ -95,7 +95,7 @@ Open [https://localhost:8090](https://localhost:8090) (self-signed SSL for WASM 
 | Image | PNG, JPG, WebP, BMP, GIF, TIFF, AVIF, ICO, SVG, HEIC, PSD, TGA, QOI, JFIF, APNG, CUR, PBM, PGM, PPM, PNM, PCX, EXR, DDS |
 | Image (input only) | NEF, CR2, DNG, ARW (RAW photo formats) |
 | Audio | MP3, WAV, FLAC, OGG, AAC, M4A, Opus, AIFF, WMA, AC3, WavPack, AMR |
-| Document | DOCX, Markdown, HTML, Plain Text |
+| Document | DOCX, Markdown, HTML, RTF, Plain Text, CSV, JSON, EPUB, ODT |
 | Video | MP4, WebM, MKV, AVI, MOV, FLV, MPG, M4V, 3GP, TS, WMV (max 90 seconds) |
 
 ---
@@ -108,4 +108,4 @@ WASM engines run sandboxed inside the browser. See [SECURITY.md](SECURITY.md) fo
 
 ---
 
-Built by [OidaNice](https://github.com/LL4nc33) -- powered by WebAssembly -- built with [Claude Workflow Engine](https://github.com/LL4nc33/claude-workflow-engine) -- v0.0.2
+Built by [OidaNice](https://github.com/LL4nc33) -- powered by WebAssembly -- built with [Claude Workflow Engine](https://github.com/LL4nc33/claude-workflow-engine) -- v0.0.3
