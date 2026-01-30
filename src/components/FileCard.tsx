@@ -1,4 +1,4 @@
-import { Card, Button, Badge, Progress } from '@oidanice/kindle-ui'
+import { Card, Button, Badge, Progress } from '@oidanice/ink-ui'
 import { ConverterFile } from '../converters/types'
 import { formatFileSize, getOutputFilename } from '../lib/fileUtils'
 import { downloadBlob } from '../lib/download'

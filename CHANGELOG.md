@@ -38,7 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Document conversion via mammoth + showdown (DOCX, Markdown, HTML, Plain Text)
 - Video conversion via @ffmpeg/ffmpeg WASM with 90-second duration limit (MP4, WebM, MKV, AVI, MOV)
 - Multi-file drag & drop with batch conversion (max 2 concurrent)
-- Kindle-inspired monochrome UI via @oidanice/kindle-ui
+- Kindle-inspired monochrome UI via @oidanice/ink-ui
 - Dark mode toggle
 - Settings page (image quality, audio bitrate/sample rate, video CRF/resolution, auto-download)
 - localStorage settings persistence

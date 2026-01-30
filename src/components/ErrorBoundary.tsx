@@ -1,5 +1,5 @@
 import { Component, ReactNode } from 'react'
-import { Layout } from '@oidanice/kindle-ui'
+import { Layout } from '@oidanice/ink-ui'
 import Logo from './Logo'
 import Footer from './Footer'
 

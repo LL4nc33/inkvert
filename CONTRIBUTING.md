@@ -35,7 +35,7 @@ refactor: extract shared FFmpeg singleton
 
 - **TypeScript strict** with `noUnusedLocals` and `noUnusedParameters`
 - **Functional React components** with hooks
-- **Tailwind CSS** via kindle-ui preset (monochrome only)
+- **Tailwind CSS** via ink-ui preset (monochrome only)
 - **WHY: comments** to explain non-obvious decisions
 
 ## What to Work On

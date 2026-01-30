@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { Layout, DarkModeToggle, Divider } from '@oidanice/kindle-ui'
+import { Layout, DarkModeToggle, Divider } from '@oidanice/ink-ui'
 import DropZone from '../components/DropZone'
 import Footer from '../components/Footer'
 import Logo from '../components/Logo'

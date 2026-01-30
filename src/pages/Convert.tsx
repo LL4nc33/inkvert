@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { Layout, DarkModeToggle, Divider } from '@oidanice/kindle-ui'
+import { Layout, DarkModeToggle, Divider } from '@oidanice/ink-ui'
 import { useConversion } from '../context/ConversionContext'
 import { useConverter } from '../hooks/useConverter'
 import FileCard from '../components/FileCard'

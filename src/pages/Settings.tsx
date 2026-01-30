@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Layout, DarkModeToggle, Button, Input, Select, Divider } from '@oidanice/kindle-ui'
+import { Layout, DarkModeToggle, Button, Input, Select, Divider } from '@oidanice/ink-ui'
 import Footer from '../components/Footer'
 import Logo from '../components/Logo'
 import { useConversion } from '../context/ConversionContext'

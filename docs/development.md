@@ -54,7 +54,7 @@ The Dockerfile uses a multi-stage build:
 
 **Components**: Functional React with hooks. No class components except ErrorBoundary.
 
-**Styling**: Tailwind CSS via `@oidanice/kindle-ui` preset. Monochrome palette only.
+**Styling**: Tailwind CSS via `@oidanice/ink-ui` preset. Monochrome palette only.
 
 **Commits**: [Conventional Commits](https://www.conventionalcommits.org/) -- `feat:`, `fix:`, `refactor:`, `docs:`.
 

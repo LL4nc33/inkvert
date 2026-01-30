@@ -12,7 +12,7 @@
     "@ffmpeg/ffmpeg": "^0.12.15",
     "@ffmpeg/util": "^0.12.2",
     "@imagemagick/magick-wasm": "^0.0.38",
-    "@oidanice/kindle-ui": "file:./kindle-ui",
+    "@oidanice/ink-ui": "file:./kindle-ui",
     "mammoth": "^1.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

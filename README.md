@@ -80,7 +80,7 @@ Open [https://localhost:8090](https://localhost:8090) (self-signed SSL for WASM 
 | Layer | Technology |
 |-------|------------|
 | Framework | React 18, TypeScript, Vite |
-| UI | @oidanice/kindle-ui, Tailwind CSS |
+| UI | @oidanice/ink-ui, Tailwind CSS |
 | Images | @imagemagick/magick-wasm |
 | Audio/Video | @ffmpeg/ffmpeg (WASM) |
 | Documents | mammoth, showdown |

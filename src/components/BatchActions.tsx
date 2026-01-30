@@ -1,4 +1,4 @@
-import { Button } from '@oidanice/kindle-ui'
+import { Button } from '@oidanice/ink-ui'
 
 interface BatchActionsProps {
   fileCount: number

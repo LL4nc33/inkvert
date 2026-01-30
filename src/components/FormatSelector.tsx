@@ -1,4 +1,4 @@
-import { Select } from '@oidanice/kindle-ui'
+import { Select } from '@oidanice/ink-ui'
 import { FileCategory } from '../converters/types'
 import { getOutputFormats } from '../lib/formats'
 
