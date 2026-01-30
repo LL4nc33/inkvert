@@ -1,24 +1,23 @@
-# Dependencies
 node_modules/
-
-# Build output
 dist/
+
+# Kindle UI (installed locally)
+kindle-ui/
+
+# CWE
+claude-workflow-engine/
+workflow/
 
 # Environment
 .env
-.env.local
-.env.*.local
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Exclude local dirs that shouldn't be committed
-kindle-ui/
-claude-workflow-engine/
+# Logo source files
+logo/

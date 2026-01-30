@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { Layout, DarkModeToggle, Divider } from '@oidanice/kindle-ui'
 import DropZone from '../components/DropZone'
+import Footer from '../components/Footer'
+import Logo from '../components/Logo'
 import { useConversion } from '../context/ConversionContext'
 
 export default function Home() {
@@ -16,9 +18,9 @@ export default function Home() {
 
   return (
     <Layout
-      title="inkvert"
+      headerLeft={<Logo />}
       headerRight={<DarkModeToggle />}
-      footer={<span>powered by kindle-ui</span>}
+      footer={<Footer />}
     >
       <div className="flex flex-col items-center gap-8 mt-8">
         <DropZone onFilesAdded={handleFilesAdded} />

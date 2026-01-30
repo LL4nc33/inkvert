@@ -6,6 +6,8 @@ import { useConverter } from '../hooks/useConverter'
 import FileCard from '../components/FileCard'
 import BatchActions from '../components/BatchActions'
 import DropZone from '../components/DropZone'
+import Footer from '../components/Footer'
+import Logo from '../components/Logo'
 
 export default function Convert() {
   const navigate = useNavigate()
@@ -25,7 +27,7 @@ export default function Convert() {
 
   return (
     <Layout
-      title="inkvert"
+      headerLeft={<Logo />}
       headerRight={
         <div className="flex items-center gap-4">
           <Link to="/settings" className="font-mono text-xs" style={{ color: 'var(--text)' }}>
@@ -34,7 +36,7 @@ export default function Convert() {
           <DarkModeToggle />
         </div>
       }
-      footer={<span>powered by kindle-ui</span>}
+      footer={<Footer />}
     >
       <div className="flex flex-col gap-4">
         <BatchActions

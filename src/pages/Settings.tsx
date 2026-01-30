@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Layout, DarkModeToggle, Button, Input, Select, Divider } from '@oidanice/kindle-ui'
+import Footer from '../components/Footer'
+import Logo from '../components/Logo'
 import { useConversion } from '../context/ConversionContext'
 
 export default function Settings() {
@@ -7,9 +9,9 @@ export default function Settings() {
 
   return (
     <Layout
-      title="inkvert"
+      headerLeft={<Logo />}
       headerRight={<DarkModeToggle />}
-      footer={<span>powered by kindle-ui</span>}
+      footer={<Footer />}
     >
       <div className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
