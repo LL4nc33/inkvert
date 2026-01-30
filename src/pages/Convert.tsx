@@ -1,26 +1,19 @@
 import { useNavigate, Link } from 'react-router-dom'
 import { Layout, DarkModeToggle, Divider } from '@oidanice/kindle-ui'
 import { useConversion } from '../context/ConversionContext'
+import { useConverter } from '../hooks/useConverter'
 import FileCard from '../components/FileCard'
 import BatchActions from '../components/BatchActions'
 import DropZone from '../components/DropZone'
 
 export default function Convert() {
   const navigate = useNavigate()
-  const { files, addFiles, removeFile, clearAll, updateFile, setOutputFormat } = useConversion()
+  const { files, addFiles, removeFile, clearAll, setOutputFormat } = useConversion()
+  const { convertFile, convertAll } = useConverter()
   const isConverting = files.some(f => f.status === 'converting')
 
   const handleFilesAdded = (newFiles: File[]) => {
     addFiles(newFiles)
-  }
-
-  const convertFile = async (id: string) => {
-    // Placeholder — converter integration comes in Task 6
-    updateFile(id, { status: 'converting', progress: 0 })
-  }
-
-  const convertAll = () => {
-    files.filter(f => f.status === 'queued').forEach(f => convertFile(f.id))
   }
 
   if (files.length === 0) {
