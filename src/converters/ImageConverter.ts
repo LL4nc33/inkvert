@@ -32,6 +32,20 @@ const FORMAT_MAP: Record<string, MagickFormat> = {
   tga: MagickFormat.Tga,
   qoi: MagickFormat.Qoi,
   svg: MagickFormat.Svg,
+  jfif: MagickFormat.Jpeg,
+  apng: MagickFormat.APng,
+  cur: MagickFormat.Cur,
+  nef: MagickFormat.Nef,
+  cr2: MagickFormat.Cr2,
+  dng: MagickFormat.Dng,
+  arw: MagickFormat.Arw,
+  pbm: MagickFormat.Pbm,
+  pgm: MagickFormat.Pgm,
+  ppm: MagickFormat.Ppm,
+  pnm: MagickFormat.Pnm,
+  pcx: MagickFormat.Pcx,
+  exr: MagickFormat.Exr,
+  dds: MagickFormat.Dds,
 }
 
 function getMagickFormat(format: string): MagickFormat {

@@ -5,6 +5,7 @@ export interface FormatInfo {
   label: string
   mimeType: string
   category: FileCategory
+  inputOnly?: boolean
 }
 
 export const FORMAT_REGISTRY: Record<string, FormatInfo> = {
@@ -25,6 +26,21 @@ export const FORMAT_REGISTRY: Record<string, FormatInfo> = {
   psd: { extension: 'psd', label: 'PSD', mimeType: 'image/vnd.adobe.photoshop', category: 'image' },
   tga: { extension: 'tga', label: 'TGA', mimeType: 'image/x-tga', category: 'image' },
   qoi: { extension: 'qoi', label: 'QOI', mimeType: 'image/qoi', category: 'image' },
+  jfif: { extension: 'jfif', label: 'JFIF', mimeType: 'image/jpeg', category: 'image' },
+  apng: { extension: 'apng', label: 'APNG', mimeType: 'image/apng', category: 'image' },
+  cur: { extension: 'cur', label: 'CUR', mimeType: 'image/x-icon', category: 'image' },
+  pbm: { extension: 'pbm', label: 'PBM', mimeType: 'image/x-portable-bitmap', category: 'image' },
+  pgm: { extension: 'pgm', label: 'PGM', mimeType: 'image/x-portable-graymap', category: 'image' },
+  ppm: { extension: 'ppm', label: 'PPM', mimeType: 'image/x-portable-pixmap', category: 'image' },
+  pnm: { extension: 'pnm', label: 'PNM', mimeType: 'image/x-portable-anymap', category: 'image' },
+  pcx: { extension: 'pcx', label: 'PCX', mimeType: 'image/x-pcx', category: 'image' },
+  exr: { extension: 'exr', label: 'EXR', mimeType: 'image/x-exr', category: 'image' },
+  dds: { extension: 'dds', label: 'DDS', mimeType: 'image/vnd-ms.dds', category: 'image' },
+  // RAW formats (input only)
+  nef: { extension: 'nef', label: 'NEF', mimeType: 'image/x-nikon-nef', category: 'image', inputOnly: true },
+  cr2: { extension: 'cr2', label: 'CR2', mimeType: 'image/x-canon-cr2', category: 'image', inputOnly: true },
+  dng: { extension: 'dng', label: 'DNG', mimeType: 'image/x-adobe-dng', category: 'image', inputOnly: true },
+  arw: { extension: 'arw', label: 'ARW', mimeType: 'image/x-sony-arw', category: 'image', inputOnly: true },
 
   // Audio
   mp3: { extension: 'mp3', label: 'MP3', mimeType: 'audio/mpeg', category: 'audio' },
@@ -36,6 +52,9 @@ export const FORMAT_REGISTRY: Record<string, FormatInfo> = {
   opus: { extension: 'opus', label: 'Opus', mimeType: 'audio/opus', category: 'audio' },
   aiff: { extension: 'aiff', label: 'AIFF', mimeType: 'audio/aiff', category: 'audio' },
   wma: { extension: 'wma', label: 'WMA', mimeType: 'audio/x-ms-wma', category: 'audio' },
+  ac3: { extension: 'ac3', label: 'AC3', mimeType: 'audio/ac3', category: 'audio' },
+  wv: { extension: 'wv', label: 'WavPack', mimeType: 'audio/x-wavpack', category: 'audio' },
+  amr: { extension: 'amr', label: 'AMR', mimeType: 'audio/amr', category: 'audio' },
 
   // Documents
   docx: { extension: 'docx', label: 'DOCX', mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', category: 'document' },
@@ -54,6 +73,13 @@ export const FORMAT_REGISTRY: Record<string, FormatInfo> = {
   mkv: { extension: 'mkv', label: 'MKV', mimeType: 'video/x-matroska', category: 'video' },
   avi: { extension: 'avi', label: 'AVI', mimeType: 'video/x-msvideo', category: 'video' },
   mov: { extension: 'mov', label: 'MOV', mimeType: 'video/quicktime', category: 'video' },
+  flv: { extension: 'flv', label: 'FLV', mimeType: 'video/x-flv', category: 'video' },
+  mpg: { extension: 'mpg', label: 'MPG', mimeType: 'video/mpeg', category: 'video' },
+  mpeg: { extension: 'mpg', label: 'MPEG', mimeType: 'video/mpeg', category: 'video' },
+  m4v: { extension: 'm4v', label: 'M4V', mimeType: 'video/x-m4v', category: 'video' },
+  '3gp': { extension: '3gp', label: '3GP', mimeType: 'video/3gpp', category: 'video' },
+  ts: { extension: 'ts', label: 'TS', mimeType: 'video/mp2t', category: 'video' },
+  wmv: { extension: 'wmv', label: 'WMV', mimeType: 'video/x-ms-wmv', category: 'video' },
 }
 
 export function getFormatsByCategory(category: FileCategory): FormatInfo[] {
@@ -63,6 +89,7 @@ export function getFormatsByCategory(category: FileCategory): FormatInfo[] {
 export function getOutputFormats(category: FileCategory): FormatInfo[] {
   const seen = new Set<string>()
   return getFormatsByCategory(category).filter(f => {
+    if (f.inputOnly) return false
     if (seen.has(f.extension)) return false
     seen.add(f.extension)
     return true

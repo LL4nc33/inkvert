@@ -20,10 +20,11 @@
 
 ## Features
 
-- **Image conversion** -- PNG, JPG, WebP, BMP, GIF, TIFF, AVIF, ICO, SVG and more via ImageMagick WASM
-- **Audio conversion** -- MP3, WAV, OGG, FLAC, AAC, M4A, OPUS, AIFF, WMA via FFmpeg WASM
+- **Image conversion** -- PNG, JPG, WebP, BMP, GIF, TIFF, AVIF, ICO, SVG, HEIC, PSD, TGA, QOI, APNG, EXR, DDS and more via ImageMagick WASM
+- **RAW photo import** -- NEF, CR2, DNG, ARW (input only) via ImageMagick WASM
+- **Audio conversion** -- MP3, WAV, OGG, FLAC, AAC, M4A, OPUS, AIFF, WMA, AC3, WavPack, AMR via FFmpeg WASM
 - **Document conversion** -- DOCX, Markdown, HTML, Plain Text via mammoth + showdown
-- **Video conversion** -- MP4, WebM, AVI, MOV, MKV with 90-second limit via FFmpeg WASM
+- **Video conversion** -- MP4, WebM, AVI, MOV, MKV, FLV, MPG, M4V, 3GP, TS, WMV with 90-second limit via FFmpeg WASM
 - **Kindle-inspired UI** -- monochrome design with dark mode, serif typography, no distractions
 - **Batch conversion** -- drag & drop multiple files, convert all at once
 - **Settings** -- quality, bitrate, resolution, sample rate, auto-download
@@ -91,10 +92,11 @@ Open [https://localhost:8090](https://localhost:8090) (self-signed SSL for WASM 
 
 | Category | Formats |
 |----------|---------|
-| Image | PNG, JPG, WebP, BMP, GIF, TIFF, AVIF, ICO, SVG, HEIC, PSD, TGA, QOI |
-| Audio | MP3, WAV, FLAC, OGG, AAC, M4A, Opus, AIFF, WMA |
+| Image | PNG, JPG, WebP, BMP, GIF, TIFF, AVIF, ICO, SVG, HEIC, PSD, TGA, QOI, JFIF, APNG, CUR, PBM, PGM, PPM, PNM, PCX, EXR, DDS |
+| Image (input only) | NEF, CR2, DNG, ARW (RAW photo formats) |
+| Audio | MP3, WAV, FLAC, OGG, AAC, M4A, Opus, AIFF, WMA, AC3, WavPack, AMR |
 | Document | DOCX, Markdown, HTML, Plain Text |
-| Video | MP4, WebM, MKV, AVI, MOV (max 90 seconds) |
+| Video | MP4, WebM, MKV, AVI, MOV, FLV, MPG, M4V, 3GP, TS, WMV (max 90 seconds) |
 
 ---
 
