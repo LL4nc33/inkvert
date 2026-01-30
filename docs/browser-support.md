@@ -70,3 +70,4 @@ Video conversion is limited to 90 seconds to prevent excessive memory usage. The
 - **Firefox private mode**: SharedArrayBuffer may be disabled
 - **Low-memory devices**: Large video files may cause out-of-memory errors
 - **HEIC/HEIF input**: Depends on ImageMagick WASM codec support, may not work on all platforms
+- **RAW photos** (NEF, CR2, DNG, ARW): Input only -- can be converted to other formats but not written as output. Large RAW files may require significant memory (~100-200 MB)

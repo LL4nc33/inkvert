@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Image formats: JFIF, APNG, CUR, ICNS, PBM, PGM, PPM, PNM, PCX, EXR, DDS via ImageMagick WASM
+- Image formats: JFIF, APNG, CUR, PBM, PGM, PPM, PNM, PCX, EXR, DDS via ImageMagick WASM
 - RAW photo input: NEF (Nikon), CR2 (Canon), DNG (Adobe), ARW (Sony) -- input only, convert to any image format
 - Audio formats: AC3 (Dolby Digital), WavPack, AMR via FFmpeg WASM
 - Video formats: FLV, MPG/MPEG, M4V, 3GP, TS, WMV via FFmpeg WASM
