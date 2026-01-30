@@ -1,34 +1,11 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg'
-import { fetchFile, toBlobURL } from '@ffmpeg/util'
+import { fetchFile } from '@ffmpeg/util'
 import { Converter } from './types'
 import { getMimeType } from '../lib/mime'
 import { getExtension } from '../lib/formats'
 import { getVideoDuration } from '../lib/fileUtils'
+import { getFFmpeg } from '../lib/ffmpegInstance'
 
 const MAX_DURATION = 90
-
-let ffmpeg: FFmpeg | null = null
-let currentProgress: ((p: number) => void) | undefined
-
-async function getFFmpeg(onProgress?: (p: number) => void): Promise<FFmpeg> {
-  currentProgress = onProgress
-
-  if (ffmpeg && ffmpeg.loaded) return ffmpeg
-
-  ffmpeg = new FFmpeg()
-
-  ffmpeg.on('progress', ({ progress }) => {
-    currentProgress?.(20 + progress * 70)
-  })
-
-  const baseURL = 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd'
-  await ffmpeg.load({
-    coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
-    wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
-  })
-
-  return ffmpeg
-}
 
 export const videoConverter: Converter = {
   async convert(file, outputFormat, settings, onProgress) {
