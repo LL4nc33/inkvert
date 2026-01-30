@@ -55,6 +55,25 @@ Open [https://localhost:8090](https://localhost:8090) (self-signed SSL for WASM 
 
 ---
 
+## Screenshots
+
+| Light Mode | Dark Mode |
+|:---:|:---:|
+| ![Light Mode](docs/screenshots/light.png) | ![Dark Mode](docs/screenshots/dark.png) |
+
+---
+
+## Documentation
+
+| Topic | Description |
+|-------|-------------|
+| [Architecture](docs/architecture.md) | System diagram, data flow, project structure |
+| [Development](docs/development.md) | Local setup, build commands, conventions |
+| [Browser Support](docs/browser-support.md) | Compatibility, SharedArrayBuffer, memory |
+| [Roadmap](ROADMAP.md) | Planned features and future ideas |
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
